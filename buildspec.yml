@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - $(aws ecr get-login --region ap-southeast-2) && docker build --tag=sonatype/nexus3 && docker push 775739901928.dkr.ecr.ap-southeast-2.amazonaws.com/metservice-nexus-3:latest
+
+artifacts:
+  files:
+    - Dockerrun.aws.json
+    - .ebextensions/1-sync-from-s3-to-nexus.config
+    - .ebextensions/2-periodically-sync-from-nexus-to-s3.config

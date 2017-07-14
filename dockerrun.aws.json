@@ -1,0 +1,19 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "775739901928.dkr.ecr.ap-southeast-2.amazonaws.com/metservice-nexus-3:latest",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8081"
+    }
+  ],
+  "Volumes": [
+    {
+      "HostDirectory": "/var/nexus3",
+      "ContainerDirectory": "nexus-data"
+    }
+  ],
+  "Logging": "/var/nexus3/log"
+}
