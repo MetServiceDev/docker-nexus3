@@ -12,7 +12,7 @@
   "Volumes": [
     {
       "HostDirectory": "/var/nexus3",
-      "ContainerDirectory": "nexus-data"
+      "ContainerDirectory": "/nexus-data"
     }
   ],
   "Logging": "/var/nexus3/log"
